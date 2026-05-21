@@ -108,6 +108,7 @@ Una vez lo tenemos la creamos en nuestra maquina atacante.
 ```
 
 Ahora vamos a ir a la web y la vamos a subir.
+
 ![](../assets/Pasted%20image%2020260521144729.png)
 ![](../assets/Pasted%20image%2020260521144751.png)
 
