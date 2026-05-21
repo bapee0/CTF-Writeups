@@ -108,8 +108,8 @@ Una vez lo tenemos la creamos en nuestra maquina atacante.
 ```
 
 Ahora vamos a ir a la web y la vamos a subir.
-![[../assets/Pasted image 20260521144729.png]]
-![[../assets/Pasted image 20260521144751.png]]
+![](../assets/Pasted%20image%2020260521144729.png)
+![](../assets/Pasted%20image%2020260521144751.png)
 
 Vemos, que nos ha denegado la subida del archivo porque no es .zip, ahora lo que haremos será usar **burpsuite** para ir probando de manera automática si podemos subir el archivo con diferentes extensiones.
 
@@ -122,17 +122,17 @@ Vamos a empezar a analizar las peticiones con el Proxy>Intercept de burpsuite y 
 Se nos generara una petición, esta la mandaremos al Intruder teniendo la petición seleccionada y pulsando "Ctrl + L".
 
 Dentro del Intruder, tenemos que seleccionar la extension del "**filename**" y una vez sleccionada la marcamos con "**Add**".
-![[../assets/Pasted image 20260521145742.png]]
+![](../assets/Pasted%20image%2020260521145742.png)
 
 Ahora tenemos que cargar el **Payload**, que será donde metamos el archivo con el que se van a probar diferentes extensiones, en mi caso dejo la captura y la **ruta** que he utilizado.
 **```/usr/share/seclists/Fuzzing/extensions-most-common.fuzz.txt```** 
-![[../assets/Pasted image 20260521145917.png]]
+![](../assets/Pasted%20image%2020260521145917.png)
 
 Una vez tenemos esto listo, tenemos que darle al botón naranja en el que pone "**Start Attack**", se nos abrirá un listado de todas las extensiones probadas y tenemos que buscar cual es la que ha funcionado (Código 200).
 
-![[../assets/Pasted image 20260521150522.png]]
+![](../assets/Pasted%20image%2020260521150522.png)
 Vemos que se ha subido **shell.phar** de manera exitosa, asi que ya podemos cerrar burpsuite y ir a **172.17.0.2/uploads/**
-![[../assets/Pasted image 20260521150625.png|598]]
+![](../assets/Pasted%20image%2020260521150625.png)
 
 Ahora abriremos en nuestra maquina atacante el puerto 4444 en escucha con el siguiente comando.
 ```bash
