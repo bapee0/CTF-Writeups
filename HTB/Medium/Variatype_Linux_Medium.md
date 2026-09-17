@@ -92,7 +92,7 @@ index b328305..615e621 100644
  <?php
  session_start();
 -$USERS = [
--    'gitbot' => 'G1tB0t_Acc3ss_2025!'
+-    'gitbot' => 'credenciales ---'
 -];
 +$USERS = [];
 ```
